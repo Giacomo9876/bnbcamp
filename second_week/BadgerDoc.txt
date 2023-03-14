@@ -1,0 +1,21 @@
+The steps for publicing an shitcoin or a token with ERC-20 are:
+
+1 Go to the wizard to OpenZeppelin at the link https://docs.openzeppelin.com/contracts/4.x/wizard
+
+2 Choose the mint option
+
+3 Compile it on Remix
+
+4 Choose on Metamask the BSCTestnet
+
+5 Take BnB from faucet https://testnet.bnbchain.org/faucet-smart
+
+6 Go for deploy on Remix having as option Injected Metamask(remember no wei or gwei value)
+
+7 Deploy
+
+8 Go on BSCTesnet and see the block already created, and proceed to verify and publish the contracts at https://testnet.bscscan.com/verifyContract
+
+9 Fill the form and if needed on Remix do The flatten option for the contract created(if the are imported other smart-con)
+
+10 Publish the contract.
