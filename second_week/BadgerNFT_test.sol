@@ -57,6 +57,20 @@ contract testSuite {
         //require(!_exists(tokenId), "ERC721: token already minted");
     }
 
+    function checkCounter() public {
+        // account index varies 0-9, value is in wei
+        _tokenIdCounter.increment();
+        Assert.equal(_tokenIdCounter.current(), 1, "Token incrementation working");
+        Assert.notEqual(_tokenIdCounter.current(), 0, "not incrementing");
+        _tokenIdCounter.decrement();
+        Assert.equal(_tokenIdCounter.current(), 0, "Token incrementation working");
+        Assert.notEqual(_tokenIdCounter.current(), 1, "not decrementing");
+
+        //require(to != address(0), "ERC721: mint to the zero address");
+        //require(!_exists(tokenId), "ERC721: token already minted");
+    }
+
+
     function checkSafeTransfer() public payable {
         // account index varies 0-9, value is in wei
         Assert.equal(badger.ownerOf(tokenId) , owner,"ERC721: transfer from incorrect owner");
